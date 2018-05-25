@@ -6,3 +6,8 @@ Supports:
 * Duck Duck Go
 * Bing
 * Yahoo
+
+## Screenshots
+
+[](screenshots/01.png)
+[](screenshots/02.png)
