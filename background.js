@@ -16,20 +16,9 @@ function search(provider, value) {
         'bing': 'https://www.bing.com/search?q=',
         'yahoo': 'https://search.yahoo.com/search?p='
     };
-    let url = urls[provider] + escapeHtml(value);
+    let url = urls[provider] + encodeURIComponent(value);
     chrome.windows.create({
         "url": url, 
         "incognito": true
     });
-}
-
-function escapeHtml(text) {
-    let map = {
-        '&': '"&amp"',
-        '<': '"&lt"',
-        '>': '"&gt"',
-        '"': '"&quot"',
-        "'": '"&#039"'
-    };
-    return text.replace(/[&<>"']/g, function(m) { return map[m]; });
 }
